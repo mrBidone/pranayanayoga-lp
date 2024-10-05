@@ -55,9 +55,9 @@ function setInitialLanguage(translations) {
 
 function applyTranslation(lang, translations) {
   // Изменяем заголовок HTML страницы
-  // document.title =
-  //   translations[lang].title ||
-  //   "Yoga lessons in Barcelona with Yana Selitskaya"; // Резервный заголовок на случай отсутствия данных
+  document.title =
+    translations[lang].title ||
+    "Yoga lessons in Barcelona with Yana Selitskaya"; // Резервный заголовок на случай отсутствия данных
 
   // Обновляем текстовые элементы на странице
   Object.keys(elements).forEach((key) => {
