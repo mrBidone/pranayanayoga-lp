@@ -46,9 +46,16 @@ function setInitialLanguage(translations) {
   const savedLang = localStorage.getItem("selectedLanguage");
   const browserLang = navigator.language.slice(0, 2);
 
-  let initialLang =
-    savedLang ||
-    (["ru", "en", "es"].includes(browserLang) ? browserLang : "en");
+  let initialLang;
+
+  // Проверка, если сохраненный язык отсутствует в доступных или его нет вообще
+  if (savedLang && translations.hasOwnProperty(savedLang)) {
+    initialLang = savedLang;
+  } else if (translations.hasOwnProperty(browserLang)) {
+    initialLang = browserLang;
+  } else {
+    initialLang = "en";
+  }
 
   applyTranslation(initialLang, translations);
 }
@@ -70,19 +77,6 @@ function applyTranslation(lang, translations) {
   } else {
     console.error(`Ошибка: Перевод для языка "${lang}" не найден.`);
   }
-
-  // if (!document.title) {
-  //   document.title = "Yoga lessons in Barcelona with Yana Selitskaya";
-  // } else {
-  //   document.title = translations[lang].title;
-  // }
-
-  // Обновляем текстовые элементы на странице
-  Object.keys(elements).forEach((key) => {
-    if (elements[key] && translations[lang][key]) {
-      elements[key].textContent = translations[lang][key];
-    }
-  });
 
   // Обновляем активную кнопку выбора языка
   document
