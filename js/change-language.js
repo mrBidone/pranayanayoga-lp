@@ -54,11 +54,28 @@ function setInitialLanguage(translations) {
 }
 
 function applyTranslation(lang, translations) {
-  if (!document.title) {
-    document.title = "Yoga lessons in Barcelona with Yana Selitskaya";
+  // Проверяем, существует ли перевод для выбранного языка
+  if (translations.hasOwnProperty(lang)) {
+    // Изменяем заголовок HTML страницы, если есть соответствующий перевод
+    document.title =
+      translations[lang].title ||
+      "Yoga lessons in Barcelona with Yana Selitskaya"; // Резервный заголовок на случай отсутствия данных
+
+    // Обновляем текстовые элементы на странице
+    Object.keys(elements).forEach((key) => {
+      if (elements[key] && translations[lang].hasOwnProperty(key)) {
+        elements[key].textContent = translations[lang][key];
+      }
+    });
   } else {
-    document.title = translations[lang].title;
+    console.error(`Ошибка: Перевод для языка "${lang}" не найден.`);
   }
+
+  // if (!document.title) {
+  //   document.title = "Yoga lessons in Barcelona with Yana Selitskaya";
+  // } else {
+  //   document.title = translations[lang].title;
+  // }
 
   // Обновляем текстовые элементы на странице
   Object.keys(elements).forEach((key) => {
