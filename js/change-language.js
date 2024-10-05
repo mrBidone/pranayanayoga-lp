@@ -48,7 +48,6 @@ function setInitialLanguage(translations) {
 
   let initialLang;
 
-  // Проверка, если сохраненный язык отсутствует в доступных или его нет вообще
   if (savedLang && translations.hasOwnProperty(savedLang)) {
     initialLang = savedLang;
   } else if (translations.hasOwnProperty(browserLang)) {
@@ -61,14 +60,11 @@ function setInitialLanguage(translations) {
 }
 
 function applyTranslation(lang, translations) {
-  // Проверяем, существует ли перевод для выбранного языка
   if (translations.hasOwnProperty(lang)) {
-    // Изменяем заголовок HTML страницы, если есть соответствующий перевод
     document.title =
       translations[lang].title ||
-      "Yoga lessons in Barcelona with Yana Selitskaya"; // Резервный заголовок на случай отсутствия данных
+      "Yoga lessons in Barcelona with Yana Selitskaya";
 
-    // Обновляем текстовые элементы на странице
     Object.keys(elements).forEach((key) => {
       if (elements[key] && translations[lang].hasOwnProperty(key)) {
         elements[key].textContent = translations[lang][key];
@@ -78,7 +74,6 @@ function applyTranslation(lang, translations) {
     console.error(`Ошибка: Перевод для языка "${lang}" не найден.`);
   }
 
-  // Обновляем активную кнопку выбора языка
   document
     .querySelectorAll(".language-btn")
     .forEach((btn) => btn.classList.remove("isActiveLangBtn"));
@@ -86,6 +81,5 @@ function applyTranslation(lang, translations) {
     .querySelector(`.language-btn[data-lang="${lang}"]`)
     .classList.add("isActiveLangBtn");
 
-  // Сохраняем выбранный язык в localStorage
   localStorage.setItem("selectedLanguage", lang);
 }
