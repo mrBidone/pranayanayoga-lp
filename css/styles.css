@@ -202,7 +202,7 @@ body {
 
 .lang-btn-list {
   display: flex;
-  gap: 7px;
+  gap: 12px;
   align-items: center;
   justify-content: center;
 }
@@ -215,7 +215,7 @@ body {
   background-image: url("../img/lang.svg");
   background-position: center;
   background-repeat: no-repeat;
-  margin-right: 8px;
+  margin-right: 3px;
   fill: rgba(0, 0, 0, 0.5);
 }
 
@@ -231,7 +231,7 @@ body {
   height: 4px;
   border-radius: 100%;
   background-color: rgba(0, 0, 0, 0.23);
-  margin-left: 9px;
+  margin-left: 12px;
 }
 
 .language-btn {
@@ -259,12 +259,15 @@ body {
   display: block;
   content: "";
   width: 355px;
-  height: 2px;
+  height: 1px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   top: 0;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="355" height="2" viewBox="0 0 355 2" fill="none"><path d="M0 1H355" stroke="url(%23paint0_radial_216_882)" /><defs><radialGradient id="paint0_radial_216_882" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(177.5 1.5) scale(177.5 0.5)"><stop stop-color="white" /><stop offset="1" stop-color="white" stop-opacity="0" /></radialGradient></defs></svg>');
+  /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="355" height="3" viewBox="0 0 355 3" fill="none"><path d="M0 1H355" stroke="url(%23paint0_radial_216_882)" /><defs><radialGradient id="paint0_radial_216_882" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(177.5 1.5) scale(177.5 0.5)"><stop stop-color="white" /><stop offset="1" stop-color="white" stop-opacity="0" /></radialGradient></defs></svg>');
+   */
+  background: linear-gradient(to right, #cbd8d6 0%, white 50.13%, #c6d5d3 100%);
+  opacity: 0.6;
   background-repeat: no-repeat;
 }
 
@@ -276,7 +279,7 @@ body {
   line-height: 1.43;
   letter-spacing: -0.04em;
   text-align: center;
-  color: rgba(38, 52, 58, 0.2);
+  color: rgba(38, 52, 58, 0.25);
 }
 
 @media only screen and (min-width: 768px) {
@@ -333,6 +336,11 @@ body {
     text-align: center;
     margin-bottom: 28px;
     color: #97a3a2;
+    transition: color 250ms linear;
+  }
+
+  .main-subtitle:hover {
+    color: rgba(151, 163, 162, 0.8);
   }
 
   .main-descr {
@@ -352,13 +360,18 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 88px;
     box-shadow: 0 14px 34px 0 rgba(139, 157, 146, 0.31);
-    background: #eef2f3;
+    background-color: #eef2f3;
     font-size: 18px;
     line-height: 1.1;
     letter-spacing: -0.06em;
     text-align: center;
     color: #26343a;
     margin-bottom: 50px;
+    transition: background-color 250ms linear;
+  }
+
+  .main-link:hover {
+    background-color: rgba(238, 242, 243, 0.7);
   }
 
   .social-links-list {
@@ -378,6 +391,11 @@ body {
     box-shadow: 0 14px 34px 0 rgba(139, 157, 146, 0.31);
     border-radius: 100px;
     background: rgba(255, 255, 255, 0.3);
+    transition: background-color 250ms linear;
+  }
+
+  .social-link:hover {
+    background-color: rgba(255, 255, 255, 0.7);
   }
 
   /* LANGUAGE-TOOGLE-SECTION */
@@ -430,6 +448,11 @@ body {
     letter-spacing: -0.04em;
     color: rgba(0, 0, 0, 0.23);
     cursor: pointer;
+    transition: color 250ms linear;
+  }
+
+  .language-btn:hover {
+    color: rgba(0, 0, 0, 0.33);
   }
 
   .isActiveLangBtn {
@@ -441,16 +464,28 @@ body {
     position: relative;
   }
 
+  .language-btn.isActiveLangBtn:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
   .footer-section::before {
     display: block;
     content: "";
     width: 760px;
-    height: 2px;
+    height: 1px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 0;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="760" height="2" viewBox="0 0 760 2" fill="none"><path d="M0 1H760" stroke="url(%23paint0_linear_273_2343)" stroke-opacity="0.6"/><defs><linearGradient id="paint0_linear_273_2343" x1="0" y1="1.5" x2="760" y2="1.5" gradientUnits="userSpaceOnUse"><stop stop-color="%23CBD8D6"/><stop offset="0.501316" stop-color="white"/><stop offset="1" stop-color="%23C6D5D3"/></linearGradient></defs></svg>');
+    /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="760" height="2" viewBox="0 0 760 2" fill="none"><path d="M0 1H760" stroke="url(%23paint0_linear_273_2343)" stroke-opacity="0.6"/><defs><linearGradient id="paint0_linear_273_2343" x1="0" y1="1.5" x2="760" y2="1.5" gradientUnits="userSpaceOnUse"><stop stop-color="%23CBD8D6"/><stop offset="0.501316" stop-color="white"/><stop offset="1" stop-color="%23C6D5D3"/></linearGradient></defs></svg>');
+     */
+    background: linear-gradient(
+      to right,
+      #cbd8d6 0%,
+      white 50.13%,
+      #c6d5d3 100%
+    );
+    opacity: 0.6;
     background-repeat: no-repeat;
   }
 

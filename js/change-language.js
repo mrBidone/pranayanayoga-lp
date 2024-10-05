@@ -8,7 +8,7 @@ const translations = {
   },
   en: {
     title: "Yoga lessons in Barcelona with Yana Selitskaya",
-    name: "Yana Selickaya",
+    name: "Yana Selitskaya",
     description:
       "Turn your yoga practice into your personal ritual of peace, where every movement opens doors to new sensations and possibilities.",
     telegramButton: "My Telegram channel",
