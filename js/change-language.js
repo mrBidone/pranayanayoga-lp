@@ -1,7 +1,7 @@
 const elements = {
-  translatorTitle: document.getElementById("translatorTitle"),
-  chamberButton: document.getElementById("chamberButton"),
-  rights: document.getElementById("rights"),
+  name: document.getElementById("name"),
+  description: document.getElementById("description"),
+  telegramButton: document.getElementById("telegramButton"),
 };
 
 function setupLanguageButtons(translations) {
@@ -33,12 +33,14 @@ function setInitialLanguage(translations) {
 
   let initialLang =
     savedLang ||
-    (["ru", "cz", "uz"].includes(browserLang) ? browserLang : "en");
+    (["ru", "en", "es"].includes(browserLang) ? browserLang : "en");
 
   applyTranslation(initialLang, translations);
 }
 
 function applyTranslation(lang, translations) {
+  document.title = translations[lang].title;
+
   Object.keys(elements).forEach((key) => {
     if (elements[key]) {
       elements[key].textContent = translations[lang][key];

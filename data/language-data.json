@@ -1,22 +1,20 @@
 {
     "ru": {
-        "translatorTitle": "Чешский судебный переводчик",
-        "chamberButton": "Komora soudních tlumočníků",
-        "rights": "Все права защищены."
-    },
-    "cz": {
-        "translatorTitle": "Soudní tlumočník",
-        "chamberButton": "Komora soudních tlumočníků",
-        "rights": "Všechna práva vyhrazena."
-    },
-    "uz": {
-        "translatorTitle": "Chexiya sud tarjimoni",
-        "chamberButton": "Sud tarjimonlar palatasi",
-        "rights": "Barcha huquqlar himoyalangan."
+        "title": "Занятия йогой в Барселоне с Яной Селицкой",
+        "name": "Яна Селицкая",
+        "description": "Превратите практику йоги в ваш личный ритуал покоя, где каждое движение открывает двери к новым ощущениям и возможностям.",
+        "telegramButton": "Перейти в телеграм канал"
     },
     "en": {
-        "translatorTitle": "Czech court interpreter",
-        "chamberButton": "Komora soudních tlumočníků",
-        "rights": "All rights reserved."
+        "title": "Yoga lessons in Barcelona with Yana Selitskaya",
+        "name": "Yana Selickaya",
+        "description": "Turn your yoga practice into your personal ritual of peace, where every movement opens doors to new sensations and possibilities.",
+        "telegramButton": "My Telegram channel"
+    },
+    "es": {
+        "title": "Clases de yoga en Barcelona con Yana Selitskaya",
+        "name": "Yana Selitskaya",
+        "description": "Convierte la práctica del yoga en tu ritual personal de paz, donde cada movimiento abre las puertas a nuevas sensaciones y posibilidades.",
+        "telegramButton": "Ir al canal de Telegram"
     }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pranayanayoga</title>
+    <title></title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,6 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <script type="module" src="./js/change-language.js"></script>
   </head>
   <body>
     <header class="page-header">
@@ -26,21 +27,19 @@
     <main>
       <section class="main-section">
         <div class="container">
-          <h1 class="main-title">Yana Selickaya</h1>
+          <h1 class="main-title" id="name"></h1>
           <a class="main-subtitle" href="https://instagram.com/pranayanayoga"
             >@pranayanayoga</a
           >
-          <p class="main-descr">
-            Превратите практику йоги</br> в ваш личный ритуал покоя, где каждое
-            движение открывает двери к новым ощущениям и возможностям.
-          </p>
-          <a class="main-link" href="https://t.me/pranayanayogabcn">Перейти в телеграм канал</a>
+          <p class="main-descr" id="description"></p>
+          <a
+            class="main-link"
+            href="https://t.me/pranayanayogabcn"
+            id="telegramButton"
+          ></a>
           <ul class="social-links-list">
             <li class="social-links-item">
-              <a
-                class="social-link"
-                href="https://instagram.com/pranayanayoga"
-              >
+              <a class="social-link" href="https://instagram.com/pranayanayoga">
                 <svg width="20" height="20">
                   <use href="./img/sprite.svg#icon-instagram"></use>
                 </svg>
@@ -54,7 +53,10 @@
               </a>
             </li>
             <li class="social-links-item">
-              <a class="social-link" href="https://www.youtube.com/@pranayanayoga574">
+              <a
+                class="social-link"
+                href="https://www.youtube.com/@pranayanayoga574"
+              >
                 <svg width="24" height="24">
                   <use href="./img/sprite.svg#icon-youtube"></use>
                 </svg>
@@ -80,8 +82,8 @@
               </button>
             </li>
             <li class="language-btn-list-item">
-              <button class="language-btn" data-lang="sp" type="button">
-               Español
+              <button class="language-btn" data-lang="es" type="button">
+                Español
               </button>
             </li>
             <li class="language-btn-list-item">
